@@ -32,7 +32,7 @@ factor: term
   | factor DIV term {$$ = create_node(EXP_DIV, $1, $3);}
   ;
 
-term: NUMBER  { $$ = create_term(EXP_VAL, yylval); }
+term: NUMBER  { $$ = create_term(EXP_VAL, yylval.d); }
   ;
 %%
 

@@ -1252,7 +1252,7 @@ yyreduce:
 
   case 11:
 #line 35 "calc.y" /* yacc.c:1646  */
-    { (yyval.a) = create_term(EXP_VAL, yylval); }
+    { (yyval.a) = create_term(EXP_VAL, yylval.d); }
 #line 1257 "calc.tab.c" /* yacc.c:1646  */
     break;
 
