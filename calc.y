@@ -39,7 +39,7 @@ term: NUMBER  { $$ = create_term(EXP_VAL, yylval.d); }
 main(int argc, char **argv)
 {
   yyparse();
-  evaluate(calcTree);
+  printf("result: %.3lf\n", evaluate(calcTree));
 }
 
 yyerror(char *s) {

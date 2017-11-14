@@ -12,9 +12,9 @@
 "*"	      {return MUL;}
 "/"	      {return DIV;}
 "|"       {return ABS;}
-[0-9]+    {yylval.d=atof(yytext); printf("its a number\n");return NUMBER;}
+[0-9]+    {yylval.d=atof(yytext); return NUMBER;}
 [ \t]	    {}
-\n	      {printf("its a new line");return EOL;}
+\n	      {return EOL;}
 .	        {printf("UNKNOWN CHARACTER: %c\n", *yytext);}
 
 %%

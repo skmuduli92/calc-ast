@@ -1491,7 +1491,7 @@ yyreturn:
 main(int argc, char **argv)
 {
   yyparse();
-  evaluate(calcTree);
+  printf("result: %.3lf\n", evaluate(calcTree));
 }
 
 yyerror(char *s) {

@@ -777,7 +777,7 @@ YY_RULE_SETUP
 case 8:
 YY_RULE_SETUP
 #line 15 "calc.l"
-{yylval.d=atof(yytext); printf("its a number\n");return NUMBER;}
+{yylval.d=atof(yytext); return NUMBER;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
@@ -788,7 +788,7 @@ case 10:
 /* rule 10 can match eol */
 YY_RULE_SETUP
 #line 17 "calc.l"
-{printf("its a new line");return EOL;}
+{return EOL;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
