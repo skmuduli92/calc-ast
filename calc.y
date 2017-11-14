@@ -36,10 +36,13 @@ term: NUMBER  { $$ = create_term(EXP_VAL, yylval.d); }
   ;
 %%
 
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   yyparse();
   printf("result: %.3lf\n", evaluate(calcTree));
+  freeTree(calcTree);
+
+  return 0;
 }
 
 yyerror(char *s) {

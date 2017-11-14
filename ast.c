@@ -43,3 +43,16 @@ double evaluate(struct AstNode *root) {
 
   }
 }
+
+void freeTree(struct AstNode *root) {
+
+  /* tree traversal and free all memory allocated */
+  if(!root)
+    return;
+
+  free(root->left);
+  free(root->right);
+
+  free(root);
+
+}

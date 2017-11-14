@@ -1488,10 +1488,13 @@ yyreturn:
 #line 37 "calc.y" /* yacc.c:1906  */
 
 
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   yyparse();
   printf("result: %.3lf\n", evaluate(calcTree));
+  freeTree(calcTree);
+
+  return 0;
 }
 
 yyerror(char *s) {
